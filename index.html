@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StreamBox | Movie Streaming</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="nav" id="nav">
+  <h2 class="logo">STREAMBOX</h2>
+  <img class="nav__avatar"src="assets/images/logo.png" alt="Website Banner">
+
+
+
+</div>
+
+<div class="banner">
+  <div class="banner_contents">
+      <h1 class="banner_title">Discover Movies & Series</h1>
+      <div class="banner_description">
+          Browse trending, top-rated, and popular movies in one place.
+      </div>
+  </div>
+  <div class="banner_fadeBottom"></div>
+</div>
+
+<div class="row">
+  <h2>Trending Now</h2>
+  <div class="row_posters" id="trendingRow"></div>
+</div>
+
+<div class="row">
+  <h2>Popular Movies</h2>
+  <div class="row_posters" id="popularRow"></div>
+</div>
+
+<div class="row">
+  <h2>Top Rated</h2>
+  <div class="row_posters" id="topRatedRow"></div>
+</div>
+
+<!-- ================= TRAILER POPUP ================= -->
+<div id="overlay">
+  <div id="videoBox">
+      <span id="closeBtn">X</span>
+      <iframe id="ytvideo" frameborder="0" allowfullscreen></iframe>
+
+      <div id="videoDescription">
+          <div class="top-row">
+              <div class="left">
+                  <h2 id="movieTitle"></h2>
+                  <div class="rating">⭐ <span id="rating"></span></div>
+                  <div class="release">Release: <span id="release"></span></div>
+                  <p id="synopsis"></p>
+              </div>
+
+              <div class="right">
+                  <div class="item"><strong>Language:</strong> <span id="lang"></span></div>
+                  <div class="item"><strong>Votes:</strong> <span id="votes"></span></div>
+                  <div class="item"><strong>Popularity:</strong> <span id="popularity"></span></div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

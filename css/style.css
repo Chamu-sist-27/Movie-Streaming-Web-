@@ -1,0 +1,258 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+}
+
+.row_poster{
+    width: 100%;
+    object-fit:cover;
+    max-height:100px;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+.row_posters{
+    display:flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+.row_poster:hover{
+    transform: scale(1.08);
+}
+.row_posters::-webkit-scrollbar{
+    display: none;
+}
+.row_posterLarge{
+    max-height: 250px;
+}
+.row_posterLarge:hover{
+    transform: scale(1.09);
+}
+.row{
+    color: white;
+    margin:20px;
+}
+.banner{
+    background-image: url(images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    color:white;
+    object-fit: contain;
+    height:448px;
+}
+.banner_contents{
+    margin-left: 30px;
+    padding-top:140px;
+    height: 190px;
+}
+.banner_contents{
+    position: relative;
+    place-content: end;
+}
+.banner_title{
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+    
+}
+.banner_contents{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* Center vertically */
+    align-items: center;       /* Center horizontally */
+    text-align: center;
+    margin-left: 0;            /* remove old left spacing */
+    padding-top: 0;
+}
+
+.banner_description{
+    width: 45rem;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    max-width: 360px;
+    height: 180px;
+}
+.banner_button{
+    cursor: pointer;
+    color:white;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgba(51, 51, 51, 0.5);
+}
+.banner_button:hover{
+    color: #000;
+    background-color: #e6e6e6;;
+    transition: all 0.2s;
+}
+.banner_fadeBottom{
+    margin-top:145px;
+    height: 7.4rem;
+    background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0.61),black);
+}
+.nav__logo{
+    width:80px;
+    object-fit: contain;
+}
+.nav__avatar{
+    width: 30px;
+    object-fit: contain;
+}
+.nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 1;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+}
+.nav__black{
+    background-color: #111;
+}
+.logo{
+    color: white;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#videoBox {
+    width: 75%;
+    max-width: 800px;
+    background: black;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #000;
+    
+}
+
+#ytvideo {
+    width: 100%;
+    aspect-ratio: 16/9;   /* Auto height based on width */
+    height: auto;
+}
+
+#videoDescription {
+    margin-top: 15px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+    text-align: left;
+}
+
+#videoDescription .meta {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#videoDescription .meta span {
+    background: rgba(255,255,255,0.2);
+    padding: 2px 6px;
+    margin-right: 6px;
+    border-radius: 3px;
+    font-weight: 13px;
+}
+
+#videoDescription .top-row{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+#videoDescription .left{
+    flex: 2;
+}
+#videoDescription .right{
+    flex: 1.2;
+    max-height: 200px;  /* you can increase this value */
+    overflow-y: auto;   /* scroll only vertical */
+    padding-right: 10px;
+}
+
+#videoDescription .more{
+    color:#7bb5ff;
+    cursor:pointer;
+}
+
+#videoDescription .right strong{
+    color:#ccc;
+}
+#videoDescription .rating {
+    margin:8px 0 12px;
+    opacity:0.9;
+}
+
+#videoDescription .release {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+#videoDescription .episode {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#videoDescription .synopsis {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+#closeBtn {
+    position: absolute;    
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10000;        
+}
+
+#videoDescription .right {
+    flex: 1.2;
+    max-height: 200px;     
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+#videoDescription .right .item {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.banner{
+    background-image: url("https://images.unsplash.com/photo-1524985069026-dd778a71c7b4");
+    background-size: contain;
+    background-position: center;
+    color:white;
+    object-fit: contain;
+    height:448px;
+}
