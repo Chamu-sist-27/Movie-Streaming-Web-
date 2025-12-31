@@ -7,6 +7,11 @@ window.addEventListener("scroll", () => {
 fetchMovies(requests.trending, "trendingRow");
 fetchMovies(requests.popular, "popularRow");
 fetchMovies(requests.topRated, "topRatedRow");
+fetchMovies(requests.action, "actionRow");
+fetchMovies(requests.comedy, "comedyRow");
+fetchMovies(requests.horror, "horrorRow");
+fetchMovies(requests.romance, "romanceRow");
+fetchMovies(requests.documentary, "documentaryRow");
 
 // ===== Trailer Popup Logic =====
 const overlay = document.getElementById("overlay");
